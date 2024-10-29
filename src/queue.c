@@ -3,10 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-queue* tail = NULL;
-queue* head = NULL;
+queue* head = NULL, *tail = NULL;
 
-void push_back(queue** node, int value) {
+void push_back(int value) {
     queue* temp = malloc(sizeof(queue));
     if(temp == NULL) {
         printf("memory wasn't been allocated in push\n");
@@ -14,11 +13,10 @@ void push_back(queue** node, int value) {
     }
     temp->value = value;
     temp->next = NULL;
-    *node = temp;
     if(tail == NULL) {
-        head = tail = *node;
+        head = tail = temp;
     } else {
-        tail->next = *node;
-        tail = *node;
+        tail->next = temp;
+        tail = temp;
     }
 }
