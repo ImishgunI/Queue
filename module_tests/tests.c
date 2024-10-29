@@ -14,9 +14,9 @@ void test_push() {
     queue* node = NULL;
 
     int value1 = 10, value2 = 20, value3 = 30;
-    push(&node, value1);
-    push(&node, value2);
-    push(&node, value3);
+    push_back(&node, value1);
+    push_back(&node, value2);
+    push_back(&node, value3);
 
     if(tail != NULL) {
         printf("Value %d\n", node->next->value);
