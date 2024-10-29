@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /*
-    We need to use 2 pointers, 1 to first element, 2 to last element, 
+    We need to use 2 pointers, 1 to first element, 2 to last element,
 */
 
 typedef struct queue {
@@ -15,7 +15,12 @@ typedef struct queue {
 extern struct queue* head;
 extern struct queue* tail;
 
-queue* push_back(int value);
-queue* pop_front(queue** node);
-
+void push_back(int value);
+queue* pop_front();
+void output_queue();
+void clean_queue();
+int size();
+int is_empty();
+int peek_top();
+int peek_back();
 #endif
