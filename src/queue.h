@@ -12,7 +12,7 @@ typedef struct queue {
     struct queue* next;
 } queue;
 
-struct queue* head = NULL, *tail = NULL;
+extern struct queue* head, *tail;
 
 void push_back(queue** node, int value);
 queue* pop_front(queue** node);
