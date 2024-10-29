@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+queue* tail = NULL;
+queue* head = NULL;
+
 void push_back(queue** node, int value) {
     queue* temp = malloc(sizeof(queue));
     if(temp == NULL) {
