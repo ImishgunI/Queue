@@ -5,11 +5,11 @@
 
 queue* head = NULL, *tail = NULL;
 
-void push_back(int value) {
+queue* push_back(int value) {
     queue* temp = malloc(sizeof(queue));
     if(temp == NULL) {
         printf("memory wasn't been allocated in push\n");
-        return;
+        return NULL;
     }
     temp->value = value;
     temp->next = NULL;
@@ -19,4 +19,5 @@ void push_back(int value) {
         tail->next = temp;
         tail = temp;
     }
+    return temp;
 }
