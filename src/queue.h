@@ -15,7 +15,7 @@ typedef struct queue {
 extern struct queue* head;
 extern struct queue* tail;
 
-void push_back(int value);
+queue* push_back(int value);
 queue* pop_front(queue** node);
 
 #endif
