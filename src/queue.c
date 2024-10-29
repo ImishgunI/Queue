@@ -53,25 +53,19 @@ void clean_queue() {
 
 int size() {
     queue* current = head;
-    if(current == NULL) {
+    if (current == NULL) {
         return 0;
     }
     int len = 0;
-    while(current != NULL) {
+    while (current != NULL) {
         ++len;
         current = current->next;
     }
     return len;
 }
 
-int is_empty() {
-    return (head == NULL) ? 1 : 0;
-}
+int is_empty() { return (head == NULL) ? 1 : 0; }
 
-int peek_top() {
-    return head->value;
-}
+int peek_top() { return head->value; }
 
-int peek_back() {
-    return tail->value;
-}
+int peek_back() { return tail->value; }
