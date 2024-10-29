@@ -87,7 +87,7 @@ void test_size() {
     push_back(value3);
 
     int len = size();
-    if(len != 0) {
+    if (len != 0) {
         printf("%d\n", len);
         printf("SUCCESS");
     } else {
@@ -101,4 +101,3 @@ void test_peeks() {
     int back = peek_back();
     printf("Top: %d Back: %d", top, back);
 }
-
